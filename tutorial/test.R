@@ -1,3 +1,5 @@
+
+library(shiny)
 ## Only run examples in interactive R sessions
 if (interactive()) {
   
@@ -10,3 +12,5 @@ if (interactive()) {
   }
   shinyApp(ui, server)
 }
+
+
