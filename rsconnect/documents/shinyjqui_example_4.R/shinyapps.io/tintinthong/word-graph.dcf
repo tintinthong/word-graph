@@ -1,0 +1,13 @@
+name: word-graph
+title: word-graph
+username:
+account: tintinthong
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1057129
+bundleId: 2274609
+url: https://tintinthong.shinyapps.io/word-graph/
+when: 1564424565.79169
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .gitattributes|global.R|modular_example.R|server.R|shinyjqui_example_2.R|shinyjqui_example_3.R|shinyjqui_example_5.R|shinyjqui_example.R|test.R

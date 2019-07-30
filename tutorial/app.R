@@ -1,5 +1,7 @@
 library(shiny)
 
+#this is a great script to know how to use Rshiny
+
 ui <- fluidPage(
   
 
@@ -8,7 +10,8 @@ ui <- fluidPage(
     numericInput("numberIn2","Number Input",10, min=1,max=100),
     textOutput("numberOut"),
     textOutput("numberOut2"),
-    textOutput("sumOut")
+    textOutput("sumOut"),
+    textOutput("global")
     
   )
   
@@ -40,6 +43,10 @@ server <- function(input, output) {
     print(paste("this is whatever", x(), y()))
   })
   
+  
+  output$global<-renderText(
+    'whatever'
+  )
 }
 
 shinyApp(ui = ui, server = server)
