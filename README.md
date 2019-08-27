@@ -14,6 +14,7 @@ The novel aspect about this experiment is that a rater can re-rate words. By obs
 1. Add Login
 2. Make bars vertical
 3. Add context word to button
+4. Fix alignment of app
 
 ## Demo
 
