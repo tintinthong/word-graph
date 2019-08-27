@@ -9,6 +9,9 @@ different places on the scale -- creating a visualisation or word graph.
 
 The novel aspect about this experiment is that a rater can re-rate words. By observing the word graph, a rater can consider relative of the current word with a previously rated word. He or she can change the previous rating by dragging the word to a different rating on the graph.
 
+![alt text](https://raw.githubusercontent.com/tintinthong/word-graph/master/image-example.png)
+
+
 ## Things to Do
 
 1. Add Login
