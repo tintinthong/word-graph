@@ -1,6 +1,4 @@
 
-
-
 word_graph<-matrix(rep(NA,12),ncol=3)
 
 

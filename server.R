@@ -1,5 +1,8 @@
 server <- function(input, output, session) {
   
+  #person 
+  id<-UUIDgenerate()
+  idCount<-1
   
   # loading testData and randomising
   
@@ -86,7 +89,24 @@ server <- function(input, output, session) {
   
   observeEvent(input$finish,{
     print(mainObj())
+    
+    objOut<-mainObj()
+    objOut[sapply(objOut, is.null)] <- NULL
+    n.obs <- sapply(objOut, length)
+    seq.max <- seq_len(max(n.obs))
+    mat <- sapply(objOut, "[", i = seq.max)
+    dataOut<-as_tibble(mat)%>% gather("score","word")%>%drop_na()
+   
+    
+    # writing file in local computer
+    path=paste0("./experiments/",id,".csv")
+    write_csv(dataOut,path)
+    # # uploading file to google sheets
     sendSweetAlert(session,title="Thank you",text="You have succesffully completed the experiment")
+    
+    # add loading screen
+    gs_upload(path,sheet_title=id,overwrite=TRUE)
+   
   })
   
   observeEvent(input$submit,{
@@ -103,14 +123,7 @@ server <- function(input, output, session) {
     }
     
     
-    
   })
-  
-  observe({
-    
-    print(submitButton$clicked)
-  })
-  
   
   #rendering ui elements
   
